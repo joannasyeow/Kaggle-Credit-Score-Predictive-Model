@@ -17,8 +17,6 @@ Here's a quick summary on the project workflow:
 
 ## Understanding the data
 
-Code in [Data Cleaning](https://github.com/joannasys/Kaggle---Credit/blob/master/1_Data%20Cleaning.ipynb)
-
 The very first step to a machine learning workflow is to understand:
 1. The problem that you are trying to solve
 2. The objective of the project
@@ -34,6 +32,10 @@ Biggest 5 factors that affects credit scoring:
 3. Length of Credit History – 15% of credit score
 4. New Credit – 10% of credit score
 5. Types of Credit In Use – 10% of credit score
+
+Source: https://www.investopedia.com/articles/pf/10/credit-score-factors.asp
+
+Code in [Data Cleaning](https://github.com/joannasys/Kaggle---Credit/blob/master/1_Data%20Cleaning.ipynb)
 
 #### Data Dictionary
 
@@ -123,8 +125,6 @@ A quick look at our data dictionary, we have columns that are under the category
 
 ## Cleaning the data
 
-Code in [Data Cleaning](https://github.com/joannasys/Kaggle---Credit/blob/master/1_Data%20Cleaning.ipynb)
-
 There are a total of 150000 rows in our dataset. However, there are some NaN values in some columns. NaN values will be problematic as most algorithms do not work well with empty cells and would result in error. 
 
 There are many ways to deal with NaN values: 
@@ -132,6 +132,8 @@ There are many ways to deal with NaN values:
 2. Impute NaN values with
     * Mean or Median of the column
     * Other imputation methods such as KNN or SVD
+
+Code in [Data Cleaning](https://github.com/joannasys/Kaggle---Credit/blob/master/1_Data%20Cleaning.ipynb)
 
 ## Analyse the data
 
@@ -144,8 +146,6 @@ We also found out that Utilization Of Unsecured Lines has the most predictive po
 Have a look in details at notebook: [EDA (Exploratory Data Analysis)](https://github.com/joannasys/Kaggle---Credit/blob/master/2_EDA.ipynb)
 
 ## Prepare the data
-
-Code in [Data Preprocessing](https://github.com/joannasys/Kaggle---Credit/blob/master/3_Data%20Preprocessing.ipynb)
 
 ### Train Test Split
 
@@ -173,15 +173,15 @@ There are various ways to resample an imbalanced dataset:
 
 imblearn is a library that consist of various ways on resampling methods. This paper https://arxiv.org/pdf/1608.06048.pdf provides a good visualisation and overview of various resampling methods and how they affect scoring of a model. 
 
-# Modeling
+Code in [Data Preprocessing](https://github.com/joannasys/Kaggle---Credit/blob/master/3_Data%20Preprocessing.ipynb)
 
-Code in [Data Modeling](https://github.com/joannasys/Kaggle---Credit/blob/master/4_Data%20Modeling.ipynb)
+# Modeling
 
 ### Evaluation Metric
 
 Why is AUC chosen to be the evalutation metric?
 
-Firstly, in a binary classification, there will be 4 outcomes from our results:
+In a binary classification, there will be 4 outcomes from our results:
 1. True Positive - Predicted positive when it is positive in fact
 2. True Negative - Predicted negative when it is negative in fact
 3. False Positive - Predicted positive when it is negative in fact (false alarm)
@@ -215,11 +215,13 @@ Training Score: <b>0.928</b>
 
 ### XGBoost
 
-Training Score: <b>0.856</b>
+Training Score: <b>0.872</b>
 <br>Test Score: <b>0.868</b>
 <br>Kaggle Submission Score: (below)
 
-<img src="https://i.imgur.com/2U1ycvh.png">
+<img src="https://i.imgur.com/UV98JuJ.png">
+
+Code in [Data Modeling](https://github.com/joannasys/Kaggle---Credit/blob/master/4_Data%20Modeling.ipynb)
 
 ## If I had more resources, I would try...
 
@@ -227,5 +229,9 @@ Training Score: <b>0.856</b>
 2. Spend more time analysing and understanding the data.
 3. Try out various resampling methods and visualise how it affects the classification of our target variable.
 4. Use SKLearn's RFECV (Recursive feature elimination with cross-validation) for feature selection.
-4. Try out anomaly detection methods (such as isolation forest, one class SVM).
-5. Tune Hyperparameters.
+5. Try out anomaly detection methods (such as isolation forest, one class SVM).
+
+
+```python
+
+```
