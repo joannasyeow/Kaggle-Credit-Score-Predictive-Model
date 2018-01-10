@@ -11,6 +11,8 @@ There are a total of 4 notebooks for this project in the order of:
 3. [Data Preprocessing](https://github.com/joannasys/Kaggle---Credit/blob/master/3_Data%20Preprocessing.ipynb)
 4. [Data Modeling](https://github.com/joannasys/Kaggle---Credit/blob/master/4_Data%20Modeling.ipynb)
 
+Note: You may run the notebooks in the order above to reproduce the same results. .csv files in the Submissions folder will already be in the format for Kaggle submission. 
+
 Here's a quick summary on the project workflow:
 
 <img src='https://i.imgur.com/PZYKh0L.png'>
